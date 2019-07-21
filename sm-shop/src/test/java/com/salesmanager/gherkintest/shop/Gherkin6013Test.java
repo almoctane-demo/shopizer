@@ -5,39 +5,39 @@ import org.junit.runner.RunWith;
 import cucumber.api.java8.En;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin="com.hpe.alm.octane.OctaneGherkinFormatter:gherkin-results\\ManualRunnerTest_OctaneGherkinResults.xml",
-        features="src/test/resources/feature/Open live chat from FierFox-6013.feature")
+@CucumberOptions(plugin="com.hpe.alm.octane.OctaneGherkinFormatter:gherkin-results/Gherkin6013Test_OctaneGherkinResults.xml",
+        features="src/test/resources/feature")
 
 public class Gherkin6013Test implements En{
     public Gherkin6013Test() {
 
         Given("payment security system is up", () -> {
             // Write code here that turns the phrase above into concrete actions
-            System.out.println("Works!");
+            System.out.println("Payment Security System Is Up!");
         });
 
         Given("a customer named (.+)", (String customer) -> {
             // Write code here that turns the phrase above into concrete actions
-            System.out.println("Works!");
+            System.out.println("A customer named " + customer);
         });
 
         Given("I have at least one item in cart", () -> {
             // Write code here that turns the phrase above into concrete actions
-            System.out.println("Works!");
+            System.out.println("I have at least one item in cart");
         });
 
         Given("I am logged in as (.+)", (String customer) -> {
             // Write code here that turns the phrase above into concrete actions
-            System.out.println("Works!");
+            System.out.println("I am logged in as "+ customer);
         });
 
         When("I try to buy items in my cart", () -> {
             // Write code here that turns the phrase above into concrete actions
-            System.out.println("Works!");
+            System.out.println("I try to buy items in my cart");
         });
 
         Then("^I confirm my payment method (.+) and proceed to checkout\\.$", (String payment) ->
-            System.out.println("Works!")
+            System.out.println("Works for " + payment)
         );
     }
 }
