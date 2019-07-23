@@ -1,15 +1,16 @@
 package com.salesmanager.gherkintest.shop;
+
 import cucumber.api.CucumberOptions;
+import cucumber.api.java8.En;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
-import cucumber.api.java8.En;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin="com.hpe.alm.octane.OctaneGherkinFormatter:gherkin-results/Gherkin6013Test_OctaneGherkinResults.xml",
+@CucumberOptions(plugin="com.hpe.alm.octane.OctaneGherkinFormatter:gherkin-results/Gherkin6020Test_OctaneGherkinResults.xml",
         features="src/test/resources/feature")
 
-public class Gherkin6013Test implements En{
-    public Gherkin6013Test() {
+public class Gherkin6020Test implements En{
+    public Gherkin6020Test() {
 
         Given("payment security system is up", () -> {
             // Write code here that turns the phrase above into concrete actions
@@ -37,7 +38,7 @@ public class Gherkin6013Test implements En{
         });
 
         Then("^I confirm my payment method (.+) and proceed to checkout\\.$", (String payment) ->
-            System.out.println("Works for " + payment)
+                System.out.println("Works for " + payment)
         );
     }
 }
