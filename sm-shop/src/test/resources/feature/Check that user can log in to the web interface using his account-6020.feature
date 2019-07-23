@@ -7,7 +7,7 @@ Background:
 Scenario Outline: Many users buy items in their carts
 Given a customer named <customer>
 Given I am logged in as <customer>
-Given I have at least one item in cart
+Given I have at least one item in cart and I live in Singapore
 When I try to buy items in my cart
 Then I confirm my payment method <payment> and proceed to checkout.
 
